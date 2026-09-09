@@ -4,7 +4,7 @@
 // (WordPress). Slugs zijn 1-op-1 overgenomen van de oorspronkelijke URL's zodat eventuele
 // bestaande links blijven werken. Voor artikelen waarvan de volledige tekst op de bron alleen
 // als losse PDF-download of extern gepubliceerd artikel beschikbaar is, staat hier de originele
-// introductietekst plus een link naar de volledige publicatie — er is geen inhoud bijverzonnen.
+// introductietekst plus een link naar de volledige publicatie: er is geen inhoud bijverzonnen.
 //
 // Elk object bevat platte metadata (title, slug, category, date, excerpt, cover, author) plus
 // een `bodyHtml`-string met de artikeltekst als schone, semantische HTML. Deze scheiding is
@@ -136,7 +136,7 @@ export const POSTS = [
       </p>
       <p class="mt-5 text-base leading-relaxed text-slate-soft">
         Een belangrijke conclusie: gezamenlijkheid krijgt pas waarde als die wordt voorafgegaan door
-        gelijkwaardig samenwerken &mdash; het herkennen en erkennen van elkaars belangen, positie en
+        gelijkwaardig samenwerken: het herkennen en erkennen van elkaars belangen, positie en
         inbreng, vanuit wederzijds respect en oprechte interesse. Dat resulteerde in het boekje
         &ldquo;Visie Gelijkwaardig Samenwerken&rdquo;, ontwikkeld door RWS en de markt samen: geen
         handleiding voor succes, maar een handreiking met praktische voorbeelden, omdat de
@@ -192,7 +192,7 @@ export const POSTS = [
     bodyHtml: `
       <p class="text-lg leading-relaxed text-slate-soft">
         Ketensamenwerking vraagt om maximaal gebruik van leercurve-effecten tussen ketenpartners. Om
-        vast te stellen of dat lukt, is prestatiemeten (dashboarding) onmisbaar &mdash; maar waarop
+        vast te stellen of dat lukt, is prestatiemeten (dashboarding) onmisbaar. Maar waarop
         stuur je dan: op output, of op proces?
       </p>
       <p class="mt-5 text-base leading-relaxed text-slate-soft">
@@ -206,8 +206,8 @@ export const POSTS = [
       </p>
       <p class="mt-5 text-base leading-relaxed text-slate-soft">
         Conclusie: idealiter neemt de ketenregisseur het initiatief om afwijkingen samen met
-        ketenpartners op te lossen, maar bij een goed ingericht incentivesysteem &mdash; waarin
-        partners zelf de pijn voelen van niet-gerealiseerde prestaties &mdash; nemen partners dat
+        ketenpartners op te lossen, maar bij een goed ingericht incentivesysteem, waarin
+        partners zelf de pijn voelen van niet-gerealiseerde prestaties, nemen partners dat
         initiatief ook uit zichzelf.
       </p>
     `,
@@ -232,7 +232,7 @@ export const POSTS = [
         Een van de belangrijkste beloften van ketensamenwerking is dat de toepassing resulteert in
         verbeterde prestaties op tijd, geld, kwaliteit, aantallen en duurzaamheid ten opzichte van
         traditionele samenwerkingsvormen. Om die belofte waar te kunnen maken, moet vanaf het
-        allereerste begin &mdash; nog vóór de samenwerking geformaliseerd wordt &mdash; worden
+        allereerste begin, nog vóór de samenwerking geformaliseerd wordt, worden
         vastgesteld wat de gezamenlijke, strategische doelstellingen zijn, met voldoende win-win voor
         alle ketenpartners.
       </p>
@@ -246,7 +246,7 @@ export const POSTS = [
       <p class="mt-5 text-base leading-relaxed text-slate-soft">
         Conclusie: zonder data over de daadwerkelijk geleverde prestaties is niet vast te stellen of
         de doelen uit de samenwerkingsovereenkomst zijn gehaald, en kan er onvoldoende gestuurd worden
-        op het continu verbeteren waar ketensamenwerking nu juist op is gebaseerd &mdash; wie niet
+        op het continu verbeteren waar ketensamenwerking nu juist op is gebaseerd. Wie niet
         weet waar hij staat, weet ook niet waarop hij moet ingrijpen.
       </p>
     `,
@@ -283,7 +283,7 @@ export const POSTS = [
   },
   {
     slug: "ketensamenwerking-leidt-tot-betere-prestaties-de-ervaringen-van-zowonen-partners",
-    title: "Ketensamenwerking leidt tot betere prestaties — de ervaringen van ZOwonen &amp; partners",
+    title: "Ketensamenwerking leidt tot betere prestaties: de ervaringen van ZOwonen &amp; partners",
     category: "Resultaten (cijfers) - praktijk",
     date: "2024-04-24",
     dateLabel: "24 april 2024",
@@ -306,7 +306,7 @@ export const POSTS = [
         De belofte van ketensamenwerking is dat je daarmee tot verbeterde prestaties komt op tijd,
         geld, kwaliteit en aantallen, en daardoor meer klantwaarde realiseert dan op de traditionele
         manier van werken. Weinig organisaties kunnen die belofte met meetbare resultaten
-        onderbouwen &mdash; bij ZOwonen en haar ketenpartners is dat anders: de toepassing van
+        onderbouwen. Bij ZOwonen en haar ketenpartners is dat anders: de toepassing van
         ketensamenwerking heeft daar daadwerkelijk geleid tot meetbaar betere prestaties.
       </p>
     `,
@@ -358,7 +358,7 @@ export const POSTS = [
     bodyHtml: `
       <p class="text-lg leading-relaxed text-slate-soft">
         Een publicatie van Bettina Hertstein, Andrea Chao en dr.ing. Marcel Noordhuis over de vraag of
-        &mdash; en hoe &mdash; ketensamenwerking haalbaar blijft op het moment dat woningcorporaties
+        (en hoe) ketensamenwerking haalbaar blijft op het moment dat woningcorporaties
         aanbestedingsplichtig worden.
       </p>
       <p class="mt-5 text-base leading-relaxed text-slate-soft">

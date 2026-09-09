@@ -3,7 +3,7 @@
 // Gebruik: node build/generate.mjs
 //
 // Nieuw artikel toevoegen: voeg een object toe aan POSTS in data/posts.mjs
-// en draai dit script opnieuw. Er is verder geen build-stap of server nodig —
+// en draai dit script opnieuw. Er is verder geen build-stap of server nodig:
 // de output is gewone statische HTML.
 
 import { writeFileSync, mkdirSync } from "node:fs";
@@ -182,13 +182,8 @@ function categoryIcon(category) {
 // ---------------------------------------------------------------------------
 
 function logoMark(root) {
-  return `<a href="${root}index.html" class="flex shrink-0 items-center gap-2.5">
-    <span class="flex h-10 w-10 items-center justify-center rounded-md bg-navy-deep text-white md:h-11 md:w-11">
-      ${ICONS.book.replace('class="icon h-4 w-4"', 'class="icon h-5 w-5"')}
-    </span>
-    <span class="font-display text-lg font-semibold leading-tight text-navy-deep md:text-xl">
-      Keten<span class="text-orange">samenwerking</span><span class="text-slate-soft">.blog</span>
-    </span>
+  return `<a href="${root}index.html" class="flex shrink-0 items-center">
+    <img src="${root}assets/Ketensamenwerking.png" alt="Ketensamenwerking Blog" class="h-14 w-auto md:h-20" />
   </a>`;
 }
 
@@ -439,7 +434,7 @@ function renderHome() {
           <div class="mt-7 max-w-2xl space-y-4 text-lg leading-relaxed text-slate-soft">
             <p>
               Artikelen, onderzoek en publicaties van dr.ing. Marcel Noordhuis over ketensamenwerking
-              en RGS in de corporatie-, bouw- en installatiesector &mdash; van wetenschappelijk
+              en RGS in de corporatie-, bouw- en installatiesector, van wetenschappelijk
               onderzoek tot concrete handvatten voor de praktijk.
             </p>
           </div>
@@ -507,7 +502,7 @@ function renderHome() {
   return page({
     root,
     path: "",
-    title: "Ketensamenwerking Blog — kennis en inzichten over ketensamenwerking",
+    title: "Ketensamenwerking Blog · kennis en inzichten over ketensamenwerking",
     description: SITE.description,
     active: "home",
     ogImage: featured.cover ?? "assets/kasteel-de-vanenburg.jpg",
@@ -577,7 +572,7 @@ function renderArticlesIndex() {
   return page({
     root,
     path: "artikelen/",
-    title: "Alle artikelen — Ketensamenwerking Blog",
+    title: "Alle artikelen · Ketensamenwerking Blog",
     description: "Overzicht van alle artikelen, onderzoek en publicaties over ketensamenwerking en RGS.",
     active: "artikelen",
     ogImage: "assets/kasteel-de-vanenburg.jpg",
@@ -661,7 +656,7 @@ ${post.bodyHtml}
   return page({
     root,
     path: `artikelen/${post.slug}.html`,
-    title: `${post.title.replace(/&[a-z]+;/g, (m) => ({ "&rsquo;": "’", "&ldquo;": "“", "&rdquo;": "”" }[m] ?? m))} — Ketensamenwerking Blog`,
+    title: `${post.title.replace(/&[a-z]+;/g, (m) => ({ "&rsquo;": "’", "&ldquo;": "“", "&rdquo;": "”" }[m] ?? m))} · Ketensamenwerking Blog`,
     description: post.excerpt,
     active: "artikelen",
     ogImage: post.cover ?? "assets/kasteel-de-vanenburg.jpg",
@@ -748,7 +743,7 @@ function renderOver() {
   return page({
     root,
     path: "over.html",
-    title: "Over — Ketensamenwerking Blog",
+    title: "Over · Ketensamenwerking Blog",
     description: `Over ${AUTHOR.name} en Ketensamenwerking Blog: kennis en inzichten over ketensamenwerking in bouw en vastgoed.`,
     active: "over",
     ogImage: AUTHOR.photo,
