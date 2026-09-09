@@ -16,7 +16,7 @@ export const AUTHOR = {
   name: "dr.ing. Marcel Noordhuis",
   role: "Ketensamenwerking Interim & Advies",
   email: "m.noordhuis@ketensamenwerking.nl",
-  photo: "assets/marcel-noordhuis.jpg",
+  photo: "assets/marcel-noordhuis-portret.jpg",
   bio: "Marcel Noordhuis is gepromoveerd op de waarde van ketensamenwerking bij nieuwbouw-, onderhouds- en renovatieprojecten en adviseert al ruim vijftien jaar woningcorporaties, bouwbedrijven en installateurs bij het inrichten en verbeteren van ketensamenwerking en RGS.",
 };
 
@@ -49,8 +49,8 @@ export const POSTS = [
     readingTime: "3 min leestijd",
     excerpt:
       "Wat maakt dat organisaties écht ketensamenwerking toepassen, en niet slechts een traditionele manier van werken hernoemen? De kenmerken van interne en externe ketensamenwerking op een rij.",
-    cover: "assets/covers/kenmerken-van-ketensamenwerking.jpg",
-    coverAlt: "Ketensamenwerking in de bouw- en vastgoedketen",
+    cover: "assets/marcel-noordhuis.png",
+    coverAlt: "dr.ing. Marcel Noordhuis, auteur van Ketensamenwerking Blog",
     featured: true,
     externalHref: "https://ketensamenwerking.blog/kenmerken-van-ketensamenwerking-in-de-bouw/",
     externalLabel: "Lees het volledige artikel",

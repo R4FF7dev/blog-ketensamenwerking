@@ -369,18 +369,9 @@ function postCard(post, root) {
 function featuredCard(post, root) {
   const href = `${root}artikelen/${post.slug}.html`;
   return `<div class="relative">
-          <div class="shine-border-orange relative aspect-[4/5] overflow-hidden rounded-lg">
-            <img src="${root}${post.cover}" alt="${post.coverAlt ?? post.title}" width="617" height="638" class="h-full w-full object-cover opacity-95" />
-            <div class="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/10 to-transparent"></div>
-            <div class="absolute top-5 left-5 right-5 rounded-md border border-navy/10 bg-white/95 p-5 backdrop-blur">
-              <div class="text-xs font-semibold uppercase tracking-[0.16em] text-orange">${post.category} &middot; Uitgelicht</div>
-              <div class="mt-2 text-base font-semibold leading-snug text-black">${post.title}</div>
-              <a href="${href}" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-orange">
-                Lees artikel
-                ${ICONS.arrowRight}
-              </a>
-            </div>
-          </div>
+          <a href="${href}" class="shine-border-orange relative block aspect-[4/5] overflow-hidden rounded-lg">
+            <img src="${root}${post.cover}" alt="${post.coverAlt ?? post.title}" width="617" height="638" class="h-full w-full object-cover" />
+          </a>
           <div class="absolute -bottom-4 -right-4 -z-10 hidden h-40 w-40 rounded-md bg-orange/15 lg:block"></div>
         </div>`;
 }
