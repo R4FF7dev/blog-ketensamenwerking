@@ -191,24 +191,54 @@ export const POSTS = [
     externalLabel: "Lees het volledige artikel",
     bodyHtml: `
       <p class="text-lg leading-relaxed text-slate-soft">
-        Ketensamenwerking vraagt om maximaal gebruik van leercurve-effecten tussen ketenpartners. Om
-        vast te stellen of dat lukt, is prestatiemeten (dashboarding) onmisbaar. Maar waarop
-        stuur je dan: op output, of op proces?
+        Ketensamenwerking draait om het maximaal benutten van leercurve-effecten tussen
+        ketenpartners. Om vast te stellen of dat ook echt lukt, is prestatiemeten (dashboarding)
+        onmisbaar: pas met goede cijfers wordt zichtbaar of de samenwerking daadwerkelijk leidt tot
+        betere prestaties op tijd, geld, kwaliteit en aantallen.
       </p>
+
+      <h2 class="mt-14 font-display text-2xl font-semibold text-navy-deep md:text-3xl">Sturen op output, niet op proces</h2>
       <p class="mt-5 text-base leading-relaxed text-slate-soft">
-        Het artikel bepleit te sturen op outputperformance (resultaatgebieden), vergelijkbaar met de
-        resultaatgebieden uit het INK-model. Pas bij grote afwijkingen tussen beoogde en
-        gerealiseerde resultaten loont het om het onderliggende proces in detail te analyseren, met
-        een multidisciplinair verbeterteam van de betrokken ketenpartners. Bewust wordt gekozen voor
-        weinig KPI&rsquo;s (&ldquo;less is more&rdquo;) en voor het teruggeven van de regie aan
-        ketenpartners over hóé zij hun prestaties realiseren, in plaats van dat opdrachtgevers dat
-        voorschrijven.
+        Het uitgangspunt is dat ketenpartners op hun eigen vakgebied deskundig zijn. Daarom richt de
+        prestatiemeting zich in eerste instantie op de outputperformance van de samenwerking als
+        geheel, vergelijkbaar met de resultaatgebieden uit het bekende INK-model. Pas wanneer de
+        gerealiseerde resultaten sterk afwijken van wat was afgesproken, loont het om een niveau
+        dieper te gaan en het onderliggende proces &mdash; van begin tot eind &mdash; in detail tegen
+        het licht te houden.
       </p>
+      <p class="mt-4 text-base leading-relaxed text-slate-soft">
+        In de praktijk, bijvoorbeeld in de samenwerking tussen woningcorporaties en bouwpartners,
+        laten de belangrijkste resultaatgebieden zich vaak vertalen naar zo&rsquo;n acht hoofdgebieden,
+        die vervolgens per gebied verder worden uitgewerkt in concrete deelprestaties.
+      </p>
+
+      <h2 class="mt-14 font-display text-2xl font-semibold text-navy-deep md:text-3xl">Wat gebeurt er bij afwijkingen?</h2>
       <p class="mt-5 text-base leading-relaxed text-slate-soft">
-        Conclusie: idealiter neemt de ketenregisseur het initiatief om afwijkingen samen met
-        ketenpartners op te lossen, maar bij een goed ingericht incentivesysteem, waarin
-        partners zelf de pijn voelen van niet-gerealiseerde prestaties, nemen partners dat
-        initiatief ook uit zichzelf.
+        Wanneer de gemeten prestaties achterblijven, wordt een multidisciplinair verbeterteam
+        samengesteld met de belangrijkste ketenpartners. Samen brengen zij elke stap van het proces
+        in kaart om te achterhalen waar en bij welke partij de afwijking ontstaat. Ligt de oorzaak in
+        de onderlinge samenwerking, dan pakken partners dit gezamenlijk op; ligt het probleem bij één
+        partner, dan lost die het zelf op, eventueel met hulp van de anderen. Die bereidheid om
+        elkaar te helpen beter te worden, is in de kern waar ketensamenwerking om draait. Zodra
+        continu monitoren laat zien dat de ingezette verbeteringen werken, kan het verbeterteam weer
+        worden ontbonden.
+      </p>
+
+      <h2 class="mt-14 font-display text-2xl font-semibold text-navy-deep md:text-3xl">Minder KPI&rsquo;s, meer eigenaarschap</h2>
+      <p class="mt-5 text-base leading-relaxed text-slate-soft">
+        Door bewust te sturen op outputprestaties in plaats van op een lange lijst KPI&rsquo;s,
+        houden partijen het dashboard behapbaar. Minstens zo belangrijk: ketenpartners krijgen zo
+        zelf de regie over hóé ze hun prestaties realiseren, in plaats van dat de opdrachtgever
+        voorschrijft hoe het werk uitgevoerd moet worden. Bij afwijkingen ligt het initiatief dan ook
+        bij de ketenpartner zelf om te onderzoeken wat er speelt &mdash; waarbij ook de opdrachtgever
+        zich mag afvragen of hij zelf onderdeel van het probleem is.
+      </p>
+
+      <h2 class="mt-14 font-display text-2xl font-semibold text-navy-deep md:text-3xl">Conclusie</h2>
+      <p class="mt-5 text-base leading-relaxed text-slate-soft">
+        Idealiter neemt de ketenregisseur het voortouw om afwijkingen samen met ketenpartners op te
+        lossen. Bij een goed ingericht incentivesysteem, waarin partners zelf de pijn voelen wanneer
+        afgesproken prestaties uitblijven, nemen zij dat initiatief in de praktijk ook uit zichzelf.
       </p>
     `,
   },

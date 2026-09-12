@@ -542,6 +542,13 @@ function renderArticlesIndex() {
           Onderzoek, vakartikelen en praktijkinzichten over ketensamenwerking en RGS in de
           corporatie-, bouw- en installatiesector.
         </p>
+        <div class="mt-5 inline-flex max-w-2xl items-start gap-2.5 rounded-md border border-hairline bg-white px-4 py-3 text-sm leading-relaxed text-slate-soft">
+          <span class="mt-0.5 shrink-0 text-orange">${ICONS.book}</span>
+          <span>
+            Dit overzicht is een mix van eigen artikelen en onderzoek van dr.ing. Marcel Noordhuis, en
+            publicaties van derden die hij tegenkwam en de moeite waard vond om te delen.
+          </span>
+        </div>
 
         <div class="mt-8 flex flex-wrap gap-2" id="filter-bar">
           ${chips}
