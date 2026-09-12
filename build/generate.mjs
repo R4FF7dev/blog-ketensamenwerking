@@ -458,6 +458,8 @@ function renderHome() {
       </div>
     </section>
 
+    ${nextEventWidget(root)}
+
     <!-- Recente artikelen -->
     <section id="artikelen" class="border-t border-hairline bg-white">
       <div class="container-x py-20 md:py-28">
@@ -669,76 +671,139 @@ ${post.bodyHtml}
 
 const PLATFORM_URL = "https://www.platform-ketensamenwerking.nl/";
 
-const KALENDER = {
+const KALENDER_RAW = {
   executive: [
     {
       nummer: 1,
+      isoDate: "2026-03-05",
       datum: "Donderdag 5 maart 2026",
       tijd: "15:30 – 20:00",
       thema: "Laatste inzichten rondom ketensamenwerking vanuit de wetenschap en praktijk",
       spreker: "prof.dr. Jack van der Veen, hoogleraar Supply Chain Management, Nyenrode Business Universiteit",
-      geweest: true,
+      platform: "Executive Platform",
     },
     {
       nummer: 2,
+      isoDate: "2026-06-04",
       datum: "Donderdag 4 juni 2026",
       tijd: "15:30 – 20:00",
       thema: "Het grondig evalueren van een bestaande samenwerking met meerdere ketenpartners",
       spreker: "Ivo Hoppe, manager vastgoed, GoedeStede",
-      geweest: true,
+      platform: "Executive Platform",
     },
     {
       nummer: 3,
+      isoDate: "2026-09-17",
       datum: "Donderdag 17 september 2026",
       tijd: "15:30 – 20:00",
       thema: "In vertrouwen werken aan de renovatie van het Binnenhof en de rol van kostenplus-contracten daarbij",
       spreker: "Peter van Leeuwen, programmadirecteur Binnenhofrenovatie",
-      geweest: false,
+      platform: "Executive Platform",
     },
     {
       nummer: 4,
+      isoDate: "2026-11-12",
       datum: "Donderdag 12 november 2026",
       tijd: "15:30 – 20:00",
       thema: "Ervaringen rondom de energietransitie en de opschaling van de publieke infrastructuur via ketensamenwerking",
       spreker: "Michel Wauters, directeur hoogspanningsstations, Enexis",
-      geweest: false,
+      platform: "Executive Platform",
     },
   ],
   highpotential: [
     {
       nummer: 1,
+      isoDate: "2026-03-05",
       datum: "Donderdag 5 maart 2026",
       tijd: "12:00 – 15:30",
       thema: "RGS met een focus op TCO-optimalisatie en de principes van ketensamenwerking als aanjager tot prestatiedoorbraken",
       spreker: "Marcel Noordhuis &amp; Egbert Kunst, Ketensamenwerking Interim &amp; Advies",
-      geweest: true,
+      platform: "High Potential Platform",
     },
     {
       nummer: 2,
+      isoDate: "2026-06-04",
       datum: "Donderdag 4 juni 2026",
       tijd: "12:00 – 15:30",
       thema: "Laatste inzichten rondom ketensamenwerking vanuit de wetenschap en praktijk",
       spreker: "prof.dr. Jack van der Veen, hoogleraar Supply Chain Management, Nyenrode Business Universiteit",
-      geweest: true,
+      platform: "High Potential Platform",
     },
     {
       nummer: 3,
+      isoDate: "2026-09-17",
       datum: "Donderdag 17 september 2026",
       tijd: "12:00 – 15:30",
       thema: "Voorspelbaar onderhoud: de route naar optimale vervangingsmomenten en budgetplanning",
       spreker: "Brendan Kleer, Croonwolter&amp;dros",
-      geweest: false,
+      platform: "High Potential Platform",
     },
     {
       nummer: 4,
+      isoDate: "2026-11-12",
       datum: "Donderdag 12 november 2026",
       tijd: "12:00 – 15:30",
       thema: "Ervaringen met KSW/RGS: organisatie-inrichting en de optimalisatie van de bouwopgave",
       spreker: "Mark van Logten, Knaapen",
-      geweest: false,
+      platform: "High Potential Platform",
     },
   ],
 };
+
+const TODAY = new Date();
+
+function withGeweest(item) {
+  return { ...item, geweest: new Date(`${item.isoDate}T23:59:59`) < TODAY };
+}
+
+const KALENDER = {
+  executive: KALENDER_RAW.executive.map(withGeweest),
+  highpotential: KALENDER_RAW.highpotential.map(withGeweest),
+};
+
+function getNextEvents() {
+  const upcoming = [...KALENDER.executive, ...KALENDER.highpotential]
+    .filter((item) => !item.geweest)
+    .sort((a, b) => (a.isoDate < b.isoDate ? -1 : a.isoDate > b.isoDate ? 1 : 0));
+  if (!upcoming.length) return [];
+  const nextDate = upcoming[0].isoDate;
+  return upcoming.filter((item) => item.isoDate === nextDate);
+}
+
+function nextEventWidget(root) {
+  const next = getNextEvents();
+  if (!next.length) return "";
+  const [first] = next;
+
+  return `<section class="border-t border-hairline bg-navy-deep">
+      <div class="container-x py-8">
+        <div class="flex flex-col gap-6 rounded-lg border border-white/10 bg-white/5 p-6 sm:flex-row sm:items-center sm:p-7">
+          <div class="flex items-center gap-4 sm:shrink-0">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-orange/15 text-orange">${ICONS.calendar.replace('class="icon h-3.5 w-3.5"', 'class="icon h-5 w-5"')}</span>
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-[0.16em] text-orange">Eerstvolgende bijeenkomst</div>
+              <div class="mt-1 text-base font-semibold text-white">${first.datum}</div>
+            </div>
+          </div>
+          <div class="h-px w-full bg-white/10 sm:h-10 sm:w-px"></div>
+          <div class="flex-1 space-y-3">
+            ${next
+              .map(
+                (item) => `<div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+              <span class="text-xs font-semibold uppercase tracking-wide text-white/50">${item.platform} &middot; ${item.tijd}</span>
+              <span class="text-sm font-medium text-white/90">${item.thema}</span>
+            </div>`,
+              )
+              .join("\n            ")}
+          </div>
+          <a href="${root}kalender.html" class="inline-flex shrink-0 items-center gap-2 rounded-md bg-orange px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange/90">
+            Bekijk kalender
+            ${ICONS.arrowRight}
+          </a>
+        </div>
+      </div>
+    </section>`;
+}
 
 function kalenderCard(item) {
   return `<article class="relative overflow-hidden rounded-lg border border-hairline bg-white p-6 sm:p-8">
