@@ -21,7 +21,7 @@ export const AUTHOR = {
 };
 
 export const SITE = {
-  name: "Ketensamenwerking Blog",
+  name: "Ketensamenwerking Kennishub",
   tagline: "Kennis en inzichten over ketensamenwerking in bouw en vastgoed",
   domain: "ketensamenwerking.blog",
   url: "https://ketensamenwerking.blog",
@@ -50,7 +50,7 @@ export const POSTS = [
     excerpt:
       "Wat maakt dat organisaties écht ketensamenwerking toepassen, en niet slechts een traditionele manier van werken hernoemen? De kenmerken van interne en externe ketensamenwerking op een rij.",
     cover: "assets/marcel-noordhuis.png",
-    coverAlt: "dr.ing. Marcel Noordhuis, auteur van Ketensamenwerking Blog",
+    coverAlt: "dr.ing. Marcel Noordhuis, auteur van Ketensamenwerking Kennishub",
     featured: true,
     externalHref: "https://ketensamenwerking.blog/kenmerken-van-ketensamenwerking-in-de-bouw/",
     externalLabel: "Lees het volledige artikel",

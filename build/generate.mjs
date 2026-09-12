@@ -183,7 +183,7 @@ function categoryIcon(category) {
 
 function logoMark(root) {
   return `<a href="${root}index.html" class="flex shrink-0 items-center">
-    <img src="${root}assets/Ketensamenwerking.png" alt="Ketensamenwerking Blog" class="h-14 w-auto md:h-20" />
+    <img src="${root}assets/Ketensamenwerking.png" alt="Ketensamenwerking Kennishub" class="h-14 w-auto md:h-20" />
   </a>`;
 }
 
@@ -191,7 +191,7 @@ function header(root, active) {
   const navItem = (href, label, key) => `<a href="${href}" class="text-sm font-medium ${active === key ? "text-navy" : "text-ink/80"} transition-colors hover:text-navy">${label}</a>`;
   return `<div class="hidden bg-navy-deep text-white md:block">
     <div class="container-x flex h-9 items-center justify-between text-xs">
-      <span class="tracking-wide">Ketensamenwerking Blog &middot; Kennis en inzichten over ketensamenwerking in bouw en vastgoed</span>
+      <span class="tracking-wide">Ketensamenwerking Kennishub &middot; Kennis en inzichten over ketensamenwerking in bouw en vastgoed</span>
       <a href="mailto:${SITE.email}" class="inline-flex items-center gap-1.5 whitespace-nowrap">
         ${ICONS.mail}
         ${SITE.email}
@@ -207,6 +207,7 @@ function header(root, active) {
         <ul class="flex items-center gap-6">
           <li>${navItem(`${root}index.html`, "Home", "home")}</li>
           <li>${navItem(`${root}artikelen/index.html`, "Artikelen", "artikelen")}</li>
+          <li>${navItem(`${root}kalender.html`, "Kalender", "kalender")}</li>
           <li>${navItem(`${root}over.html`, "Over", "over")}</li>
           <li>
             <a href="${SITE.linkedin}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md bg-orange px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange/90">
@@ -227,6 +228,7 @@ function header(root, active) {
         <ul class="flex flex-col">
           <li><a href="${root}index.html" class="block border-b border-hairline py-3 text-sm font-medium text-ink/80">Home</a></li>
           <li><a href="${root}artikelen/index.html" class="block border-b border-hairline py-3 text-sm font-medium text-ink/80">Artikelen</a></li>
+          <li><a href="${root}kalender.html" class="block border-b border-hairline py-3 text-sm font-medium text-ink/80">Kalender</a></li>
           <li><a href="${root}over.html" class="block border-b border-hairline py-3 text-sm font-medium text-ink/80">Over</a></li>
         </ul>
         <div class="mt-4">
@@ -241,7 +243,7 @@ function footer(root) {
   return `<footer class="bg-navy-deep text-white/80">
     <div class="container-x grid grid-cols-1 gap-12 py-16 md:grid-cols-4">
       <div>
-        <div class="font-display text-lg font-semibold text-white">Ketensamenwerking.blog</div>
+        <div class="font-display text-lg font-semibold text-white">Ketensamenwerking Kennishub</div>
         <div class="text-[11px] uppercase tracking-[0.18em] text-white/50">Kennisplatform</div>
         <p class="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
           Artikelen, onderzoek en publicaties over ketensamenwerking en RGS in de corporatie-, bouw-
@@ -254,10 +256,11 @@ function footer(root) {
       </div>
 
       <div>
-        <h3 class="text-xs font-semibold uppercase tracking-[0.18em] text-white">Blog</h3>
+        <h3 class="text-xs font-semibold uppercase tracking-[0.18em] text-white">Kennishub</h3>
         <ul class="mt-5 space-y-3 text-sm">
           <li><a href="${root}index.html" class="text-white/65 hover:text-white">Home</a></li>
           <li><a href="${root}artikelen/index.html" class="text-white/65 hover:text-white">Alle artikelen</a></li>
+          <li><a href="${root}kalender.html" class="text-white/65 hover:text-white">Kalender</a></li>
           <li><a href="${root}over.html" class="text-white/65 hover:text-white">Over de auteur</a></li>
         </ul>
       </div>
@@ -293,7 +296,7 @@ function footer(root) {
     </div>
     <div class="border-t border-white/10">
       <div class="container-x flex flex-col items-start justify-between gap-3 py-6 text-xs text-white/50 md:flex-row md:items-center">
-        <span id="copyright-year">&copy; 2026 Ketensamenwerking.blog. Alle rechten voorbehouden.</span>
+        <span id="copyright-year">&copy; 2026 Ketensamenwerking Kennishub. Alle rechten voorbehouden.</span>
         <span>Onderdeel van Ketensamenwerking Interim &amp; Advies</span>
       </div>
       <div class="container-x pb-6 text-center text-xs text-white/40">
@@ -305,7 +308,7 @@ function footer(root) {
 
   <script>
     document.getElementById("copyright-year").textContent =
-      "© " + new Date().getFullYear() + " Ketensamenwerking.blog. Alle rechten voorbehouden.";
+      "© " + new Date().getFullYear() + " Ketensamenwerking Kennishub. Alle rechten voorbehouden.";
 
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -426,7 +429,7 @@ function renderHome() {
         <div class="lg:col-span-7">
           <div class="section-label">
             ${ICONS.book.replace('class="icon h-4 w-4"', 'class="icon h-3.5 w-3.5"')}
-            <span>Ketensamenwerking Blog</span>
+            <span>Ketensamenwerking Kennishub</span>
           </div>
           <h1 class="mt-5 font-display text-4xl font-semibold leading-[1.05] text-navy-deep md:text-5xl lg:text-6xl">
             Diepgaand onderzoek en praktijkinzichten over ketensamenwerking.
@@ -502,7 +505,7 @@ function renderHome() {
   return page({
     root,
     path: "",
-    title: "Ketensamenwerking Blog · kennis en inzichten over ketensamenwerking",
+    title: "Ketensamenwerking Kennishub · kennis en inzichten over ketensamenwerking",
     description: SITE.description,
     active: "home",
     ogImage: featured.cover ?? "assets/kasteel-de-vanenburg.jpg",
@@ -572,7 +575,7 @@ function renderArticlesIndex() {
   return page({
     root,
     path: "artikelen/",
-    title: "Alle artikelen · Ketensamenwerking Blog",
+    title: "Alle artikelen · Ketensamenwerking Kennishub",
     description: "Overzicht van alle artikelen, onderzoek en publicaties over ketensamenwerking en RGS.",
     active: "artikelen",
     ogImage: "assets/kasteel-de-vanenburg.jpg",
@@ -656,10 +659,165 @@ ${post.bodyHtml}
   return page({
     root,
     path: `artikelen/${post.slug}.html`,
-    title: `${post.title.replace(/&[a-z]+;/g, (m) => ({ "&rsquo;": "’", "&ldquo;": "“", "&rdquo;": "”" }[m] ?? m))} · Ketensamenwerking Blog`,
+    title: `${post.title.replace(/&[a-z]+;/g, (m) => ({ "&rsquo;": "’", "&ldquo;": "“", "&rdquo;": "”" }[m] ?? m))} · Ketensamenwerking Kennishub`,
     description: post.excerpt,
     active: "artikelen",
     ogImage: post.cover ?? "assets/kasteel-de-vanenburg.jpg",
+    body,
+  });
+}
+
+const PLATFORM_URL = "https://www.platform-ketensamenwerking.nl/";
+
+const KALENDER = {
+  executive: [
+    {
+      nummer: 1,
+      datum: "Donderdag 5 maart 2026",
+      tijd: "15:30 – 20:00",
+      thema: "Laatste inzichten rondom ketensamenwerking vanuit de wetenschap en praktijk",
+      spreker: "prof.dr. Jack van der Veen, hoogleraar Supply Chain Management, Nyenrode Business Universiteit",
+      geweest: true,
+    },
+    {
+      nummer: 2,
+      datum: "Donderdag 4 juni 2026",
+      tijd: "15:30 – 20:00",
+      thema: "Het grondig evalueren van een bestaande samenwerking met meerdere ketenpartners",
+      spreker: "Ivo Hoppe, manager vastgoed, GoedeStede",
+      geweest: true,
+    },
+    {
+      nummer: 3,
+      datum: "Donderdag 17 september 2026",
+      tijd: "15:30 – 20:00",
+      thema: "In vertrouwen werken aan de renovatie van het Binnenhof en de rol van kostenplus-contracten daarbij",
+      spreker: "Peter van Leeuwen, programmadirecteur Binnenhofrenovatie",
+      geweest: false,
+    },
+    {
+      nummer: 4,
+      datum: "Donderdag 12 november 2026",
+      tijd: "15:30 – 20:00",
+      thema: "Ervaringen rondom de energietransitie en de opschaling van de publieke infrastructuur via ketensamenwerking",
+      spreker: "Michel Wauters, directeur hoogspanningsstations, Enexis",
+      geweest: false,
+    },
+  ],
+  highpotential: [
+    {
+      nummer: 1,
+      datum: "Donderdag 5 maart 2026",
+      tijd: "12:00 – 15:30",
+      thema: "RGS met een focus op TCO-optimalisatie en de principes van ketensamenwerking als aanjager tot prestatiedoorbraken",
+      spreker: "Marcel Noordhuis &amp; Egbert Kunst, Ketensamenwerking Interim &amp; Advies",
+      geweest: true,
+    },
+    {
+      nummer: 2,
+      datum: "Donderdag 4 juni 2026",
+      tijd: "12:00 – 15:30",
+      thema: "Laatste inzichten rondom ketensamenwerking vanuit de wetenschap en praktijk",
+      spreker: "prof.dr. Jack van der Veen, hoogleraar Supply Chain Management, Nyenrode Business Universiteit",
+      geweest: true,
+    },
+    {
+      nummer: 3,
+      datum: "Donderdag 17 september 2026",
+      tijd: "12:00 – 15:30",
+      thema: "Voorspelbaar onderhoud: de route naar optimale vervangingsmomenten en budgetplanning",
+      spreker: "Brendan Kleer, Croonwolter&amp;dros",
+      geweest: false,
+    },
+    {
+      nummer: 4,
+      datum: "Donderdag 12 november 2026",
+      tijd: "12:00 – 15:30",
+      thema: "Ervaringen met KSW/RGS: organisatie-inrichting en de optimalisatie van de bouwopgave",
+      spreker: "Mark van Logten, Knaapen",
+      geweest: false,
+    },
+  ],
+};
+
+function kalenderCard(item) {
+  return `<article class="relative overflow-hidden rounded-lg border border-hairline bg-white p-6 sm:p-8">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="text-xs font-semibold uppercase tracking-[0.16em] text-orange">Bijeenkomst ${item.nummer}</span>
+              ${item.geweest ? `<span class="rounded-full bg-hairline px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-soft">Geweest</span>` : `<span class="rounded-full bg-orange/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-orange">Binnenkort</span>`}
+            </div>
+            <div class="mt-2 flex items-center gap-1.5 text-sm text-slate-soft">
+              ${ICONS.calendar}${item.datum} &middot; ${item.tijd}
+            </div>
+            <h3 class="mt-4 font-display text-lg font-semibold text-navy-deep">${item.thema}</h3>
+            <div class="mt-2 text-sm font-semibold text-navy">${item.spreker}</div>
+          </article>`;
+}
+
+function renderKalender() {
+  const root = "";
+  const body = `
+    <section class="relative border-b border-hairline bg-surface">
+      <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div class="ambient-glow-orange absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full"></div>
+        <div class="blueprint-bg blueprint-drift absolute inset-0 opacity-40"></div>
+      </div>
+      <div class="container-x relative py-16 md:py-24">
+        <div class="section-label"><span>Kalender</span></div>
+        <h1 class="heading-rule mt-5 font-display text-3xl font-semibold md:text-4xl">Jaarprogramma 2026</h1>
+        <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-soft">
+          Alle bijeenkomsten van het Executive Platform en het High Potential Platform, onderdeel van
+          Platform Ketensamenwerking op het terrein van Kasteel de Vanenburg. Voor de volledige
+          programma-inhoud, deelnamevoorwaarden en aanmelding verwijzen we naar
+          <a href="${PLATFORM_URL}" target="_blank" rel="noopener noreferrer" class="font-semibold text-navy underline decoration-orange decoration-2 underline-offset-4 hover:text-navy-deep">platform-ketensamenwerking.nl</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container-x py-16 md:py-20">
+        <div class="section-label"><span>Executive Platform</span></div>
+        <h2 class="heading-rule mt-5 font-display text-2xl font-semibold text-navy-deep md:text-3xl">Bijeenkomsten Executive Platform</h2>
+        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+          ${KALENDER.executive.map(kalenderCard).join("\n          ")}
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-hairline bg-surface">
+      <div class="container-x py-16 md:py-20">
+        <div class="section-label"><span>High Potential Platform</span></div>
+        <h2 class="heading-rule mt-5 font-display text-2xl font-semibold text-navy-deep md:text-3xl">Bijeenkomsten High Potential Platform</h2>
+        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+          ${KALENDER.highpotential.map(kalenderCard).join("\n          ")}
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-hairline bg-navy-deep">
+      <div class="container-x flex flex-col items-start justify-between gap-6 py-16 md:flex-row md:items-center md:py-20">
+        <div class="max-w-xl">
+          <h2 class="font-display text-2xl font-semibold text-white md:text-3xl">Deelnemen aan een bijeenkomst?</h2>
+          <p class="mt-3 text-sm leading-relaxed text-white/70">
+            Aanmelden, deelnamevoorwaarden en het volledige programma vindt u op de website van
+            Platform Ketensamenwerking.
+          </p>
+        </div>
+        <a href="${PLATFORM_URL}" target="_blank" rel="noopener noreferrer" class="inline-flex shrink-0 items-center gap-2 rounded-md bg-orange px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange/90">
+          Naar platform-ketensamenwerking.nl
+          ${ICONS.arrowRight}
+        </a>
+      </div>
+    </section>`;
+
+  return page({
+    root,
+    path: "kalender.html",
+    title: "Kalender · Ketensamenwerking Kennishub",
+    description:
+      "Alle bijeenkomsten van het Executive Platform en het High Potential Platform van Platform Ketensamenwerking in 2026.",
+    active: "kalender",
+    ogImage: "assets/kasteel-de-vanenburg.jpg",
     body,
   });
 }
@@ -674,9 +832,9 @@ function renderOver() {
       </div>
       <div class="container-x relative py-16 md:py-24">
         <div class="section-label"><span>Over</span></div>
-        <h1 class="heading-rule mt-5 font-display text-3xl font-semibold md:text-4xl">Over Ketensamenwerking Blog</h1>
+        <h1 class="heading-rule mt-5 font-display text-3xl font-semibold md:text-4xl">Over Ketensamenwerking Kennishub</h1>
         <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-soft">
-          Ketensamenwerking.blog bundelt onderzoek, vakartikelen en praktijkinzichten over
+          Ketensamenwerking Kennishub bundelt onderzoek, vakartikelen en praktijkinzichten over
           ketensamenwerking en RGS in de corporatie-, bouw- en installatiesector. Een initiatief van
           Ketensamenwerking Interim &amp; Advies.
         </p>
@@ -743,8 +901,8 @@ function renderOver() {
   return page({
     root,
     path: "over.html",
-    title: "Over · Ketensamenwerking Blog",
-    description: `Over ${AUTHOR.name} en Ketensamenwerking Blog: kennis en inzichten over ketensamenwerking in bouw en vastgoed.`,
+    title: "Over · Ketensamenwerking Kennishub",
+    description: `Over ${AUTHOR.name} en Ketensamenwerking Kennishub: kennis en inzichten over ketensamenwerking in bouw en vastgoed.`,
     active: "over",
     ogImage: AUTHOR.photo,
     body,
@@ -759,9 +917,10 @@ mkdirSync(join(ROOT, "artikelen"), { recursive: true });
 
 writeFileSync(join(ROOT, "index.html"), renderHome());
 writeFileSync(join(ROOT, "over.html"), renderOver());
+writeFileSync(join(ROOT, "kalender.html"), renderKalender());
 writeFileSync(join(ROOT, "artikelen", "index.html"), renderArticlesIndex());
 for (const post of POSTS) {
   writeFileSync(join(ROOT, "artikelen", `${post.slug}.html`), renderPost(post));
 }
 
-console.log(`Gegenereerd: index.html, over.html, artikelen/index.html en ${POSTS.length} artikelpagina's.`);
+console.log(`Gegenereerd: index.html, over.html, kalender.html, artikelen/index.html en ${POSTS.length} artikelpagina's.`);
